@@ -3,7 +3,8 @@
 {% block title %}Įrašai{% endblock %}
 
 {% block content %}
-<h1>Straipsniai</h1>
+<h1>Straipsniai:</h1>
+<hr>
 {% for post in posts %}
 {% if post['status'] == "published" %}
 <h3>{{ post['pavadinimas'] }}</h3>
@@ -12,5 +13,6 @@
 {% else %}
 <h3>{{ post['pavadinimas'] }} - <i>Publikavimas laikinai išjungtas</i></h3>
 {% endif %}
+<hr>
 {% endfor %}
 {% endblock %}
